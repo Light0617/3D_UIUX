@@ -22,11 +22,9 @@ with open(vna_file, 'w') as outfile:
         items[-1] = items[-1].replace('"', '')
         if items[-1][0].isdigit():
           items[-1] = items[-1][0]
-          if i > 1:
-            new_line = '\n' + ' '.join(items)
-          else:
-            new_line = ' '.join(items)
+          new_line = '\n' + ' '.join(items)
           outfile.write(new_line)
+    outfile.write('\n')
     
     
     
